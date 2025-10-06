@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5a623;
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --danger-color: #d0021b;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+section {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: #777;
+}
+
+.error-text {
+    color: var(--danger-color);
+    margin-top: 0.5rem;
+    min-height: 1.2em;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.5rem;
+}
+
+#expense-list {
+    list-style: none;
+    padding: 0;
+}
+
+#expense-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#expense-list li:last-child {
+    border-bottom: none;
+}
+
+.expense-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-details .category {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.expense-details .date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.expense-amount {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#category-spending {
+    display: grid;
+    gap: 0.5rem;
+}
+#category-spending div {
+    display: flex;
+    justify-content: space-between;
+}
